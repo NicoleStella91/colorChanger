@@ -9,20 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Color Changer</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <main class="container">
         <h1 class="title">Color Changer</h1>
         <label for="hexInput">Color (hex):</label>
-        <input type="text" name="hex" id="hexInput" placeholder="#000000">
+        <input type="text" name="hex" id="hexInput" placeholder="#000000" value="#8ca9c7">
+        <div class="toggle">
+            <p id="lightenText" class="toggle-text">Lighten</p>
+            <div id="toggleBtn" class="toggle-btn">
+                <div class="inner-circle"></div>
+            </div>
+            <p id="darkenText" class="toggle-text unselected">Darken</p>
+        </div>
         <label for="slider" id="sliderText">0%</label>
         <input type="range" min="0" max="100" value="0" id="slider" name="slider">
         <p>Input Color</p>
         <div id="inputColor" class="box">
 
         </div>
-        <p>Altered Color</p>
+        <p id="alteredColorText">Altered Color</p>
         <div id="alteredColor" class="box">
 
         </div>
